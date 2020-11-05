@@ -67,9 +67,10 @@ Since the p-value = 0.5117 is greater than the assumped alpha=0.05, the null hyp
 
 I'm thinking of using metrics including fuel efficiency (mpg), cylinder, body-style(sedan, suv, truck), engine-type(eg gas vs electric), color, and cost
 
-* Determine what question we would ask, what the null and alternative hypothesis would be to answer that question, and what statistical test could be used to test this hypothesis.
+#### * Determine what question we would ask, what the null and alternative hypothesis would be to answer that question, and what statistical test could be used to test this hypothesis.
+
 To demonstrate MechaCar has a better fuel efficiency we need to show that MechaCar's mpg is significant higher than the mean of its top competitors. The null hypothesis would be mpg of MechaCar is about the same as that of other brands. The alternative hypothethis is MechaCar's mpg is significantly higher than that of its competitors. Similarly we should test if MechaCar's mean price is significantly lower than its competitors. Null hypothesis is there is no significant difference between mean of MechaCar and mean of its competitor.
 
-* Knowing what test should be used, what data should be collected?
+##### * Knowing what test should be used, what data should be collected?
+
 A single-tailed two-sample t-test should be used in this case. Mpg of competitor's different vehicles mpg should be collected. Similarly prices of competitor's difference vehicles should also be collected.
- 1 
