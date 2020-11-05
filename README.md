@@ -1,5 +1,8 @@
-1. Multiple linear regression result from MechaCar data set.
-The MLR is performed with the summary as below:
+# Module 15 Statistics and R
+
+### 1. Multiple linear regression result from MechaCar data set.
+
+#### The MLR is performed with the summary as below:
 Call:
 lm(formula = mpg ~ vehicle.length + vehicle.weight + spoiler.angle + 
     ground.clearance + AWD, data = data)
@@ -24,43 +27,44 @@ Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825
 F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
 
 
-* Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+#### * Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+
 Assuming alpha=0.05, vehicle.length and groud.clearance coefficients have signficant p-values much lower than the false positive cutoff of 0.05. Therefore the null hypothesis is rejected and we have to accept the alternative hypotheis their varaince are non-random.
 
-* Is the slope of the linear model considered to be zero? Why or why not?
+#### * Is the slope of the linear model considered to be zero? Why or why not?
+
 The slopes for vehicle.length is 6.267 and for ground.clearance is 3.546. So they are not zero.
 
-* Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+#### * Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+
 The overall p-value of 5.35e-11 is signficant to reject H0. The adjusted R-squred of 0.68 and F-statistic of 22.07 both strongly suggest this linear model can predict mpg of MechaCar prototypes effectively.
 
 
-2. Suspension Coil Summary
+### 2. Suspension Coil Summary
 
 Summary statistics for pounds-per-inch (PSI) varaible is:
 mean      median    variance         Std 
 1499.531020 1499.746532   76.234593    8.731242 
 
-* The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per inch. Does the current manufacturing data meet this design specification? Why or why not?
+#### * The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per inch. Does the current manufacturing data meet this design specification? Why or why not?
+
 The calculated variance for PSI = 76.23, which is less than the 100 PSI threshould. Therefore the current manufacturing data meets this design specification.
 
-3. Suspension Coil T-test
+### 3. Suspension Coil T-test
+
 To test if the PSI is statistically different from the population mean of 1,500 psi, the one-sampled t-test is preformed and the result is below:
 	One Sample t-test
 
-data:  data2$PSI
-t = -0.65784, df = 149, p-value = 0.5117
-alternative hypothesis: true mean is not equal to 1500
-95 percent confidence interval:
- 1498.122 1500.940
-sample estimates:
-mean of x 
-499.531
+data:  data2$PSI, t = -0.65784, df = 149, p-value = 0.5117
+alternative hypothesis: true mean is not equal to 1500 95 percent confidence interval:  1498.122 1500.940
+sample estimates: mean of x  499.531
 
 
 Since the p-value = 0.5117 is greater than the assumped alpha=0.05, the null hypothesis is accepted and therefore no significant difference is found between the current manufacturing psi and the population mean.
 
-3. Design Your Own Study
-* Think critically about what metrics you would think would be of interest to a consumer (cost, fuel efficiency, color options, etc.).
+### 3. Design Your Own Study
+#### * Think critically about what metrics you would think would be of interest to a consumer (cost, fuel efficiency, color options, etc.).
+
 I'm thinking of using metrics including fuel efficiency (mpg), cylinder, body-style(sedan, suv, truck), engine-type(eg gas vs electric), color, and cost
 
 * Determine what question we would ask, what the null and alternative hypothesis would be to answer that question, and what statistical test could be used to test this hypothesis.
